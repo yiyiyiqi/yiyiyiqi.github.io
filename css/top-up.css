@@ -1,0 +1,126 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+.clearfix:before,
+.clearfix:after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                    visibility: hidden;
+                    line-height: 0;
+                    height: 0;
+                    font-size:0;
+}
+
+.clearfix { *zoom:1;}
+    a{
+        text-decoration: none;
+    }
+    ul li{
+        list-style:none;
+    }
+    .top-up{
+        width: 100%;
+        background-color: #333333;
+        line-height: 61px;
+    }
+    .top-up-inner{
+        width: 80%;
+        margin:0 auto;
+        
+        
+    }
+    .up-left{
+        float: left;
+    }
+    .follow{
+        font-size: 12px;
+        color:white;
+        cursor: pointer;
+        float: left;
+        margin-right: 27px;
+        position: relative;
+    }
+    .follow:hover .followin,.followin{
+        /* opacity: 1; */
+        display: block;
+    }
+    
+    .follow:hover,.download:hover{
+        color:#666;
+    }
+    .download{
+        float: left;
+        cursor: pointer;
+        font-size: 12px;
+        color:#fff;
+    }
+    .followin,.downloadin{
+        display: none;
+        border: 1px solid #eee;
+        background-color: #fff;
+        /* opacity: 0; */
+        position: absolute;
+        top:65px;
+        left:-50px;
+    }
+    .downloadin{
+        padding:8px;
+        position: absolute;
+        top:66px;
+        left:155px;
+    }
+    .download:hover .downloadin,.download{
+        display: block;
+    }
+    .title11{
+        display: block;
+        margin: -13px 0 18px;
+        line-height: 0;
+        color: #333;
+        text-align: center;
+    }
+    .up-right{
+        float: right;
+    }
+    .up-right li{
+        float: left;
+
+        padding-left: 20px;
+    }
+    .up-right li a{
+        color:#fff;
+        display: block;
+        font-size: 12px;
+    }
+    .up-right li span{
+        color:#666;
+    }
+    .up-right-one{
+        margin-right: -10px;
+    }
+    .up-right-three{
+        margin-left: -10px;
+    }
+    .up-right-four a span,.up-right-five a span{
+        margin-right: 5px;
+        color:#fff;
+    }
+    .up-right ul li:hover a,.up-right ul li:hover a span{
+        color:#ccc;
+    }

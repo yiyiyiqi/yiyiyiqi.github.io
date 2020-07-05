@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+    <link rel="stylesheet" href="css/top-up.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./css/index1.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+
+        .logo {
+            width: 100%;
+            background: #fff;
+        }
+
+        .logo-inner {
+            width: 98px;
+            height: 58px;
+            margin: 0 auto;
+            padding-bottom: 30px;
+            padding: 55px 0;
+        }
+
+        .nav {
+            width: 1190px;
+            width: 100%;
+            padding-top: 0;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            z-index: 10000;
+        }
+
+        .nav-container {
+            display: inline-block;
+            height: 50px;
+        }
+
+        .nav-container ul {
+            float: left;
+            width: 930px;
+            height: 50px;
+            padding-left: 80px;
+            overflow: hidden;
+        }
+
+        .nav-container ul li {
+            float: left;
+            padding: 6px 30px;
+        }
+
+        .nav-container ul li a {
+            font-weight: bold;
+            color: #333;
+            font-size: 22px;
+        }
+
+        .nav-container ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-container>i {
+            position: absolute;
+            right: 140px;
+        }
+
+        .inp {
+            position: relative;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #123;
+            width: 220px;
+            outline: none;
+            top: 17px;
+        }
+
+        .nav-container-down {
+            width: 100%;
+            z-index: 10000;
+            width: 100%;
+            position: relative;
+        }
+
+        /* .box {
+            width: 100%;
+            height: 230px;
+            display: block;
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 0;
+            padding: 30px 0 70px 0;
+            /* z-index: -1; */
+        /* background-color: #fff;
+        border-bottom: 3px solid #333;
+        }           */
+        .box,
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5 {
+            width: 100%;
+            height: 230px;
+            display: block;
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 0;
+            padding: 30px 0 70px 0;
+            /* z-index: -1; */
+            background-color: #fff;
+            border-bottom: 3px solid #333;
+        }
+
+        .sub-container {
+            margin-left: 94.5px;
+            margin: 0 auto;
+            width: 1190px;
+            height: 280px;
+            position: relative;
+        }
+
+        .d1,
+        .d2,
+        .d3,
+        .d4,
+        .d5 {
+            width: 130px;
+            float: left;
+            margin-right: 70px;
+            margin-left: 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .d2 {
+            margin-left: 70px;
+            left: 230px;
+        }
+
+        .d2 .dd {
+            width: 78px;
+        }
+
+        .d3 {
+            margin-left: 70px;
+            left: 460px;
+        }
+
+        .d3 .dd,
+        .d5 .dd {
+            width: 64px;
+        }
+
+        .d4 {
+            margin-left: 70px;
+            left: 690px;
+        }
+
+        .d5 {
+            margin-left: 70px;
+            left: 920px;
+        }
+
+        .dt {
+            padding-bottom: 13px;
+        }
+
+        .dd {
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            width: 60px;
+        }
+
+        .dd a,
+        .dt a {
+            font-weight: bold;
+            color: #666;
+        }
+
+        .dt a {
+            color: #333;
+        }
+
+        .goods-wrapper {
+            /* width: 100%; */
+            /* padding: 44px 0 60px;
+            width: 1190px;
+            height: 771px;
+            background-color: #555;
+            margin: 0 auto;
+            position: relative; */
+            width: 1190px;
+            margin: 0 auto;
+            /* margin-top: 264px; */
+
+        }
+
+        .goods-inner {
+            padding: 44px 0 60px;
+            width: 1190px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .product-message {
+            width: 1190px;
+            margin: 0 auto;
+            margin-top: 80px;
+            margin-bottom: 120px;
+        }
+
+        .product-message .title h3 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .message-content {
+            margin-top: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* 合并边框 */
+            border-spacing: 0;
+        }
+
+        .mes-table {
+            width: 100%;
+            table-layout: fixed;
+            /* 表格列宽由表格宽度和列宽度设定。 */
+        }
+
+        .mes-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .mes-table tr td,
+        .size-table tr td {
+            line-height: 80px;
+            text-align: left;
+            font-size: 12px;
+            color: #666;
+            text-overflow: ellipsis;
+            /* 显示省略符号来代表被修剪的文本。 */
+            white-space: nowrap;
+            /* 规定段落中的文本不进行换行： */
+            overflow: hidden;
+        }
+
+        .size-message {
+            /* margin-top: 120px; */
+            width: 1190px;
+            height: 257px;
+            margin: 0 auto;
+            margin-bottom: 120px;
+            /* display: block; */
+        }
+
+        .size-message .title h3,
+        .product-details .title h3 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .product-details .title {
+            height: 48px;
+        }
+
+        .size-content {
+            margin-top: 60px;
+        }
+
+        .size-table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .size-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-details {
+            /* margin-top: 120px; */
+            width: 1190px;
+            margin: 0 auto;
+        }
+
+        .detail-photo {
+            width: 740px;
+            margin-top: 40px;
+            margin: 0 auto;
+        }
+
+        .detail-down {
+            width: 990px;
+            margin: 0 auto;
+            text-align: center;
+            text-align-last: left;
+            margin-top: 140px;
+        }
+
+        .detail-down p {
+            color: #333;
+            font-size: 12px;
+        }
+
+        .product-pingjia {
+            width: 1190px;
+            margin: 0 auto;
+            margin-top: 130px;
+        }
+
+        .pingjia-tit h3 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .pingjia-left {
+            margin-top: 40px;
+            height: 120px;
+        }
+
+        .pingjia-left div {
+            padding-left: 30px;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .pingjia-left div strong {
+            float: left;
+            /* display: block;
+            width: 120px;
+            height: 16px; */
+        }
+
+        .pingjia-left div a {
+            width: 62px;
+            height: 20px;
+            color: #fff;
+            display: block;
+            position: absolute;
+            left: 152px;
+            /* float: right; */
+            background-color: #333;
+        }
+
+        .guess-like {
+            width: 1190px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+
+        .like-tit {
+            margin-bottom: 102px;
+        }
+
+        .like-tit h3 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .like {
+            /* margin-top: 102px;
+            margin-bottom: 140px; */
+            width: 1190px;
+            height: 384px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        .one {
+            width: 1182px;
+            height: 384px;
+            padding-left: 25px;
+
+        }
+
+        .two {
+            margin: 0 auto;
+            /* margin-bottom: 140px; */
+        }
+
+        .swiper-item1,
+        .swiper-item2,
+        .swiper-item3,
+        .swiper-item4 {
+            display: inline-block;
+            width: 210px;
+            padding: 10px;
+            /* float: left; */
+            margin-left: 24px;
+            margin-right: 24px;
+            background-color: #fff;
+            font-size: 12px;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .swiper-item1 i,
+        .swiper-item2 i,
+        .swiper-item3 i,
+        .swiper-item4 i {
+            color: #666;
+            position: absolute;
+            font-size: 14px;
+            right: 20px;
+            bottom: 20px;
+            opacity: 0;
+        }
+
+        .swiper-item1:hover,
+        .swiper-item2:hover,
+        .swiper-item3:hover,
+        .swiper-item4:hover {
+            background-color: #efefef;
+        }
+
+        .swiper-item1:hover i,
+        .swiper-item2:hover i,
+        .swiper-item3:hover i,
+        .swiper-item4:hover i {
+            opacity: 1;
+        }
+
+        .goods-img {
+            background-color: #fff;
+        }
+
+        .goods-img a {
+            /* margin: 30px 0; */
+            display: block;
+            width: 210px;
+            height: 210px;
+        }
+
+        .goods-img a img {
+            width: 100%;
+        }
+
+        .swiper-item1>img,
+        .swiper-item2>img,
+        .swiper-item3>img,
+        .swiper-item4>img {
+            margin-top: 15px;
+            width: 54px;
+            height: 24px;
+        }
+
+        .swiper-item1>p,
+        .swiper-item2>p,
+        .swiper-item3>p,
+        .swiper-item4>p {
+            margin-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .swiper-item1>p a,
+        .swiper-item2>p a,
+        .swiper-item3>p a,
+        .swiper-item4>p a {
+            color: #666;
+        }
+
+        .price {
+            margin: 15px 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+        }
+
+
+        .swiper-button-prev:after {
+            font-size: 22px;
+            color: #666;
+            /* position: absolute;
+            left: 75px; */
+        }
+
+        .swiper-button-next:after {
+            font-size: 22px;
+            color: #666;
+            /* position: absolute;
+            right: 75px; */
+        }
+
+        .goodzs-img {
+            float: left;
+            width: 595px;
+        }
+
+        .big-box {
+            width: 480px;
+            height: 480px;
+            position: absolute;
+            left: 150px;
+            top: -100px;
+            /* overflow: hidden; */
+            /* float: right; */
+        }
+
+        .big-box>div {
+            position: absolute;
+            top: 142px;
+        }
+
+        .pic-box1 {
+            position: relative;
+
+            width: 480px;
+            height: 480px;
+
+        }
+
+        .pic-box1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img-list {
+            width: 75px;
+            height: 497px;
+        }
+
+        .img-list li {
+            width: 66px;
+            height: 66px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+
+        .goods-int {
+            float: left;
+            padding-left: 57px;
+            color: #333;
+            z-index: -1;
+            font-family: 'Microsoft YaHei';
+            width: 528px;
+        }
+
+        .brand-logo {
+            width: 142px;
+            height: 72px;
+            line-height: 72px;
+            border: 1px solid #f6f6f6;
+            text-align: center;
+        }
+
+        .brand-logo a {
+            display: block;
+            width: 100%;
+            height: 100%
+        }
+
+        .brand-logo a img {
+            padding: 10px 0;
+        }
+
+        .goods-int p {
+
+            font-size: 16px;
+            margin-top: 25px;
+            font-weight: normal;
+        }
+
+        .g-price {
+            margin-top: 40px;
+            padding: 4px 0 20px;
+        }
+
+        .g-price strong {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .g-price del {
+            text-decoration: line-through;
+        }
+
+        .g-line {
+            margin-top: 40px;
+            height: 0;
+            overflow: hidden;
+            border-bottom: 1px dotted #a7a7a7;
+            margin-bottom: 15px;
+        }
+
+        .g-color {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        .fan a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+            padding: 1px;
+            margin-left: 8px;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+
+        .g-size {
+            margin-top: 40px;
+        }
+
+        .g-size a {
+            color: #333;
+            font-size: 12px;
+        }
+
+        .g1 {
+            float: left;
+            font-size: 12px;
+        }
+
+        .g2 {
+            margin-left: 10px;
+            width: 320px;
+            float: left;
+        }
+
+        .g2 a {
+            border: 1px solid #ccc;
+            min-width: 40px;
+            width: 40px;
+            overflow: visible;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 4px 0 4px;
+            margin-bottom: 10px;
+            display: inline-block;
+            background: #fff;
+            margin-right: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .g3 {
+            cursor: pointer;
+            margin-left: 50px;
+            float: left;
+        }
+
+        .g-count {
+            margin-top: 25px;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .g-count span {
+            float: left;
+        }
+
+        .input-con input {
+            float: left;
+        }
+
+        .input-con input {
+            width: 60px;
+            height: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .plus,
+        .minus {
+            display: block;
+            width: 18px;
+            height: 14px;
+            background-color: #333;
+            margin-bottom: 3px;
+        }
+
+        .plus {
+            position: absolute;
+            left: 106px;
+            text-align: center;
+        }
+
+        .minus {
+            position: relative;
+            left: 106px;
+            top: 20px;
+            text-align: center;
+        }
+
+        .plus,
+        .minus {
+            color: #fff;
+        }
+
+        .g-go {
+            margin-top: 30px;
+        }
+
+        .g-go ul li a {
+            width: 222px;
+            height: 46px;
+            line-height: 46px;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .mai1 {
+            color: #fff;
+            background-color: #333;
+        }
+
+        .mai2 {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #333;
+        }
+
+        .g-share {
+            margin-top: 30px;
+        }
+
+        .g-share span {
+            font-size: 12px;
+            margin-right: 10px;
+
+        }
+
+        .g-share span a {
+            color: #333;
+            /* display: block; */
+            margin-left: 3px;
+        }
+
+        .g-code {
+            float: right;
+            margin-top: -20px;
+            padding-right: 70px;
+        }
+
+        .g-code div {
+            width: 120px;
+            height: 120px;
+        }
+
+        .g-code div img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .g-code div span {
+            color: #666;
+            font-size: 12px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-up">
+            <div class="top-up-inner clearfix">
+                <div class="up-left clearfix">
+                    <div class="follow">
+                        <span>关注</span>
+                        <div class="followin">
+                            <img src="images/login/weChat.jpg" alt="">
+                            <span class="title11">关注公众号</span>
+                        </div>
+                    </div>
+                    <div class="download">
+                        <span>下载APP</span>
+                        <div class="downloadin">
+                            <img src="images/login/app.jpg" alt="">
+                            <span class="title11">优购APP下载</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="up-right">
+                    <ul class="clearfix">
+                        <li class="up-right-one"><a href="">登录</a></li>
+                        <li class="up-right-two"><span>/</span></li>
+                        <li class="up-right-three"><a href="">注册</a></li>
+                        <li class="up-right-four"><a href=""><span class="fa fa-heart" aria-hidden="true"></span>收藏</a>
+                        </li>
+                        <li class="up-right-five"><a href=""><span class="fa fa-shopping-bag"
+                                    aria-hidden="true"></span>购物袋</a></li>
+                        <li class="up-right-six"><a href="">公告</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <div class="logo-inner">
+                <a href="https://www.yougou.com/">
+                    <img src="./images/index/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav untop clearfix" style="display:block; ">
+                <div class="nav-container clearfix">
+                    <ul class="clearfix">
+                        <li><a href="">首页</a></li>
+                        <li><a href="" class="woman">女鞋</a></li>
+                        <li><a href="">男鞋</a></li>
+                        <li><a href="">运动</a></li>
+                        <li><a href="">户外</a></li>
+                        <li><a href="">儿童</a></li>
+                        <li><a href="">箱包</a></li>
+                    </ul>
+                    <input type="text" class="inp">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="nav-container-down clearfix">
+                    <div class="box clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">品牌</a></div>
+                                <div class="dd"><a href="">百丽</a></div>
+                                <div class="dd"><a href="">她他</a></div>
+                                <div class="dd"><a href="">天美意</a></div>
+                                <div class="dd"><a href="">思加图</a></div>
+                                <div class="dd"><a href="">森达</a></div>
+                                <div class="dd"><a href="">真美诗</a></div>
+                                <div class="dd"><a href="">妙丽</a></div>
+                                <div class="dd"><a href="">拔佳</a></div>
+                                <div class="dd"><a href="">暇步士</a></div>
+                                <div class="dd"><a href="">百思图</a></div>
+                                <div class="dd"><a href="">圣伽步</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">热销推荐</a></div>
+                                <div class="dd"><a href="">2020新款单鞋</a></div>
+                                <div class="dd"><a href="">专柜同款</a></div>
+                                <div class="dd"><a href="">人气TOP</a></div>
+                                <div class="dd"><a href="">老爹鞋</a></div>
+                                <div class="dd"><a href="">乐福鞋</a></div>
+                                <div class="dd"><a href="">小白鞋</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">女士靴子</a></div>
+                                <div class="dd"><a href="">短靴</a></div>
+                                <div class="dd"><a href="">中靴</a></div>
+                                <div class="dd"><a href="">长靴</a></div>
+                                <div class="dd"><a href="">绒里靴</a></div>
+                                <div class="dd"><a href="">马丁靴</a></div>
+                                <div class="dd"><a href="">雪地靴</a></div>
+                            </div>
+                            <div class="d4 ">
+                                <div class="dt"><a href="">女士单鞋</a></div>
+                                <div class="dd"><a href="">浅口鞋</a></div>
+                                <div class="dd"><a href="">满帮鞋</a></div>
+                                <div class="dd"><a href="">尖头鞋</a></div>
+                                <div class="dd"><a href="">乐福鞋</a></div>
+                                <div class="dd"><a href="">玛丽珍</a></div>
+                                <div class="dd"><a href="">英伦风</a></div>
+                                <div class="dd"><a href="">休闲鞋</a></div>
+                                <div class="dd"><a href="">运动鞋</a></div>
+                                <div class="dd"><a href="">高跟鞋</a></div>
+                                <div class="dd"><a href="">平底鞋</a></div>
+                                <div class="dd"><a href="">细跟鞋</a></div>
+                                <div class="dd"><a href="">粗跟鞋</a></div>
+                            </div>
+                            <div class="d5 ">
+                                <div class="dt"><a href="">女士凉鞋</a></div>
+                                <div class="dd"><a href="">2020新款</a></div>
+                                <div class="dd"><a href="">穆勒凉鞋</a></div>
+                                <div class="dd"><a href="">中空凉鞋</a></div>
+                                <div class="dd"><a href="">后空凉鞋</a></div>
+                                <div class="dd"><a href="">纯凉鞋</a></div>
+                                <div class="dd"><a href="">凉拖</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav top clearfix"
+                style="border-bottom: 3px solid #000;background-color:#fff;position: fixed;top:0; display:none;">
+                <div class="nav-container two clearfix">
+                    <ul class="clearfix">
+                        <li style="padding :
+                        3px 0px;"><a href="" style="display: block;width: 60px;height: 38px;"><img
+                                    src="./images/index/logo.png" alt="" style="width: 100%;"></a></li>
+                        <li><a href="">首页</a></li>
+                        <li><a href="" class="woman">女鞋</a></li>
+                        <li><a href="" class="man-shoess">男鞋</a></li>
+                        <li><a href="" class="sport-shoess">运动</a></li>
+                        <li><a href="" class="out-shoess">户外</a></li>
+                        <li><a href="" class="child-shoess">儿童</a></li>
+                        <li><a href="" class="bag-shoess">箱包</a></li>
+                    </ul>
+                    <input type="text" class="inp">
+                    <i class="fa fa-search" aria-hidden="true" style="top: 15px;"></i>
+                </div>
+                <div class="nav-container-down clearfix">
+                    <div class="box clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">品牌</a></div>
+                                <div class="dd"><a href="">百丽</a></div>
+                                <div class="dd"><a href="">她他</a></div>
+                                <div class="dd"><a href="">天美意</a></div>
+                                <div class="dd"><a href="">思加图</a></div>
+                                <div class="dd"><a href="">森达</a></div>
+                                <div class="dd"><a href="">真美诗</a></div>
+                                <div class="dd"><a href="">妙丽</a></div>
+                                <div class="dd"><a href="">拔佳</a></div>
+                                <div class="dd"><a href="">暇步士</a></div>
+                                <div class="dd"><a href="">百思图</a></div>
+                                <div class="dd"><a href="">圣伽步</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">热销推荐</a></div>
+                                <div class="dd"><a href="">2020新款单鞋</a></div>
+                                <div class="dd"><a href="">专柜同款</a></div>
+                                <div class="dd"><a href="">人气TOP</a></div>
+                                <div class="dd"><a href="">老爹鞋</a></div>
+                                <div class="dd"><a href="">乐福鞋</a></div>
+                                <div class="dd"><a href="">小白鞋</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">女士靴子</a></div>
+                                <div class="dd"><a href="">短靴</a></div>
+                                <div class="dd"><a href="">中靴</a></div>
+                                <div class="dd"><a href="">长靴</a></div>
+                                <div class="dd"><a href="">绒里靴</a></div>
+                                <div class="dd"><a href="">马丁靴</a></div>
+                                <div class="dd"><a href="">雪地靴</a></div>
+                            </div>
+                            <div class="d4 ">
+                                <div class="dt"><a href="">女士单鞋</a></div>
+                                <div class="dd"><a href="">浅口鞋</a></div>
+                                <div class="dd"><a href="">满帮鞋</a></div>
+                                <div class="dd"><a href="">尖头鞋</a></div>
+                                <div class="dd"><a href="">乐福鞋</a></div>
+                                <div class="dd"><a href="">玛丽珍</a></div>
+                                <div class="dd"><a href="">英伦风</a></div>
+                                <div class="dd"><a href="">休闲鞋</a></div>
+                                <div class="dd"><a href="">运动鞋</a></div>
+                                <div class="dd"><a href="">高跟鞋</a></div>
+                                <div class="dd"><a href="">平底鞋</a></div>
+                                <div class="dd"><a href="">细跟鞋</a></div>
+                                <div class="dd"><a href="">粗跟鞋</a></div>
+                            </div>
+                            <div class="d5 ">
+                                <div class="dt"><a href="">女士凉鞋</a></div>
+                                <div class="dd"><a href="">2020新款</a></div>
+                                <div class="dd"><a href="">穆勒凉鞋</a></div>
+                                <div class="dd"><a href="">中空凉鞋</a></div>
+                                <div class="dd"><a href="">后空凉鞋</a></div>
+                                <div class="dd"><a href="">纯凉鞋</a></div>
+                                <div class="dd"><a href="">凉拖</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box1 clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">品牌</a></div>
+                                <div class="dd"><a href="">百丽</a></div>
+                                <div class="dd"><a href="">她他</a></div>
+                                <div class="dd"><a href="">天美意</a></div>
+                                <div class="dd"><a href="">思加图</a></div>
+                                <div class="dd"><a href="">森达</a></div>
+                                <div class="dd"><a href="">真美诗</a></div>
+                                <div class="dd"><a href="">妙丽</a></div>
+                                <div class="dd"><a href="">拔佳</a></div>
+                                <div class="dd"><a href="">暇步士</a></div>
+                                <div class="dd"><a href="">百思图</a></div>
+                                <div class="dd"><a href="">圣伽步</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">热销推荐</a></div>
+                                <div class="dd"><a href="">2020新款单鞋</a></div>
+                                <div class="dd"><a href="">专柜同款</a></div>
+                                <div class="dd"><a href="">人气TOP</a></div>
+                                <div class="dd"><a href="">老爹鞋</a></div>
+                                <div class="dd"><a href="">乐福鞋</a></div>
+                                <div class="dd"><a href="">小白鞋</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">精选分类</a></div>
+                                <div class="dd"><a href="">正装鞋</a></div>
+                                <div class="dd"><a href="">休闲鞋</a></div>
+                                <div class="dd"><a href="">系带鞋</a></div>
+                                <div class="dd"><a href="">乐福鞋</a></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="box2 clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">品牌</a></div>
+                                <div class="dd"><a href="">阿迪达斯</a></div>
+                                <div class="dd"><a href="">耐克</a></div>
+                                <div class="dd"><a href="">三叶草</a></div>
+                                <div class="dd"><a href="">阿迪休闲</a></div>
+                                <div class="dd"><a href="">彪马</a></div>
+                                <div class="dd"><a href="">匡威</a></div>
+                                <div class="dd"><a href="">鬼冢虎</a></div>
+                                <div class="dd"><a href="">亚瑟士</a></div>
+                                <div class="dd"><a href="">锐步</a></div>
+                                <div class="dd"><a href="">万斯</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">运动鞋</a></div>
+                                <div class="dd"><a href="">跑步鞋</a></div>
+                                <div class="dd"><a href="">休闲鞋</a></div>
+                                <div class="dd"><a href="">复刻鞋</a></div>
+                                <div class="dd"><a href="">篮球鞋</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">女士靴子</a></div>
+                                <div class="dd"><a href="">短靴</a></div>
+                                <div class="dd"><a href="">中靴</a></div>
+                                <div class="dd"><a href="">长靴</a></div>
+                                <div class="dd"><a href="">绒里靴</a></div>
+                                <div class="dd"><a href="">马丁靴</a></div>
+                                <div class="dd"><a href="">雪地靴</a></div>
+                            </div>
+                            <div class="d4 ">
+                                <div class="dt"><a href="">运动服</a></div>
+                                <div class="dd"><a href="">夹克</a></div>
+                                <div class="dd"><a href="">卫衣/套头衫</a></div>
+                                <div class="dd"><a href="">长裤</a></div>
+                                <div class="dd"><a href="">T恤衫</a></div>
+                                <div class="dd"><a href="">Polo衫</a></div>
+                            </div>
+                            <div class="d5 ">
+                                <div class="dt"><a href="">关键词</a></div>
+                                <div class="dd"><a href="">专柜同款</a></div>
+                                <div class="dd"><a href="">夏季新品</a></div>
+                                <div class="dd"><a href="">贝壳头鞋</a></div>
+                                <div class="dd"><a href="">SALE</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box3 clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">品牌</a></div>
+                                <div class="dd"><a href="">CAT</a></div>
+                                <div class="dd"><a href="">添柏岚</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">户外鞋</a></div>
+                                <div class="dd"><a href="">工装靴</a></div>
+                                <div class="dd"><a href="">休闲鞋</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">户外服</a></div>
+                                <div class="dd"><a href="">T恤</a></div>
+                                <div class="dd"><a href="">休闲裤</a></div>
+                                <div class="dd"><a href="">羽绒服</a></div>
+                            </div>
+                            <div class="d4 ">
+                                <div class="dt"><a href="">关键词</a></div>
+                                <div class="dd"><a href="">速干</a></div>
+                                <div class="dd"><a href="">大黄靴</a></div>
+                                <div class="dd"><a href="">热销TOP</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box4 clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">热门品牌</a></div>
+                                <div class="dd"><a href="">阿迪达斯</a></div>
+                                <div class="dd"><a href="">耐克</a></div>
+                                <div class="dd"><a href="">三叶草</a></div>
+                                <div class="dd"><a href="">鬼冢虎</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">童鞋</a></div>
+                                <div class="dd"><a href="">跑步鞋</a></div>
+                                <div class="dd"><a href="">休闲鞋</a></div>
+                                <div class="dd"><a href="">复刻鞋</a></div>
+                                <div class="dd"><a href="">篮球鞋</a></div>
+                                <div class="dd"><a href="">训练鞋</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">童装</a></div>
+                                <div class="dd"><a href="">儿童套装</a></div>
+                                <div class="dd"><a href="">裤装</a></div>
+                                <div class="dd"><a href="">外套/风衣</a></div>
+                                <div class="dd"><a href="">卫衣</a></div>
+                                <div class="dd"><a href="">棉服/羽绒服</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box5 clearfix">
+                        <div class="sub-container clearfix">
+                            <div class="d1 ">
+                                <div class="dt"><a href="">品牌</a></div>
+                                <div class="dd"><a href="">百丽箱包</a></div>
+                                <div class="dd"><a href="">她他</a></div>
+                                <div class="dd"><a href="">天美意</a></div>
+                                <div class="dd"><a href="">思加图</a></div>
+                                <div class="dd"><a href="">真美诗</a></div>
+                                <div class="dd"><a href="">妙丽</a></div>
+                                <div class="dd"><a href="">拔佳</a></div>
+                                <div class="dd"><a href="">百思图</a></div>
+                                <div class="dd"><a href="">圣伽步</a></div>
+                            </div>
+                            <div class="d2 ">
+                                <div class="dt"><a href="">热销推荐</a></div>
+                                <div class="dd"><a href="">2020新款 </a></div>
+                                <div class="dd"><a href="">人气TOP</a></div>
+                            </div>
+                            <div class="d3 ">
+                                <div class="dt"><a href="">魅力女包</a></div>
+                                <div class="dd"><a href="">手提/手包</a></div>
+                                <div class="dd"><a href="">单肩/斜跨</a></div>
+                                <div class="dd"><a href="">双肩包</a></div>
+                            </div>
+                            <div class="d4 ">
+                                <div class="dt"><a href="">经典男包</a></div>
+                                <div class="dd"><a href="">手提/手包</a></div>
+                                <div class="dd"><a href="">单肩/斜跨</a></div>
+                                <div class="dd"><a href="">双肩包</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <div class="goods-wrapper  ">
+            <div class="goods-inner clearfix">
+                <div class="goodzs-img clearfix">
+                    <ul class="img-list">
+                        <li><img class="my-foto1" src="./images/details/x1.jpg"></li>
+                        <li><img class="my-foto2" src="./images/details/x2.jpg"></li>
+                        <li><img class="my-foto3" src="./images/details/x3.jpg"></li>
+                        <li><img class="my-foto4" src="./images/details/x4.jpg"></li>
+                        <li><img class="my-foto5" src="./images/details/x5.jpg"></li>
+                        <li><img class="my-foto6" src="./images/details/x6.jpg"></li>
+                        <li><img class="my-foto7" src="./images/details/x3.jpg"></li>
+                    </ul>
+                    <div class="big-box">
+                        <div class="pic-box1 style=" width:480px; height: 480px;"">
+                            <img class="da1" src="./images/details/x1d.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="goods-int">
+                    <div class="brand-logo">
+                        <a href="https://www.yougou.com/f-teenmix-0-0-6.html"><img
+                                src="./images/details/shop-two-two.png" alt="">
+                        </a>
+
+                    </div>
+                    <p>Teenmix/天美意2020秋新款商场同款复古方头乐福鞋粗跟牛皮革女单鞋AX331CQ0</p>
+                    <div class="g-price">
+                        <span>￥<strong>899</strong></span>
+                        <del>￥899</del>
+                    </div>
+                    <div class="g-line"></div>
+                    <div class="g-buy">
+                        <div class="g-color">
+                            <p>
+                                <span style="top: -30px;position: relative;">颜色：</span>
+                                <span class=" fan" style="display: inline; width: 400px; margin-left: 2px;">
+                                    <a href=""><img src="./images/details/fan1.jpg" alt=""></a>
+                                    <a href=""><img src="./images/details/fan2.jpg" alt=""></a>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="g-size clearfix">
+                            <span class="g1"> 尺码:</span>
+                            <span class="g2">
+                                <a href="">34</a>
+                                <a href="">35</a>
+                                <a href="">36</a>
+                                <a href="">37</a>
+                                <a href="">38</a>
+                                <a href="">39</a>
+                                <a href="">40</a>
+                            </span>
+                            <span class="g3">
+                                <a href=""><i class="fa fa-link" aria-hidden="true"></i>查看尺码表</a>
+                            </span>
+                        </div>
+                        <div class="g-count clearfix">
+                            <span>数量：</span>
+                            <div class="input-con">
+                                <input type="text" value="1">
+                            </div>
+                            <div class="buttons">
+                                <a href="" class="fa fa-angle-up plus"> </a>
+                                <a href="" class="fa fa-angle-down minus"> </a>
+                            </div>
+                        </div>
+                        <div class="g-go">
+                            <ul class="clearfix">
+                                <li><a href="" class="mai1">加入购物袋</a></li>
+                                <li><a href="" class="mai2">立即购买</a></li>
+                            </ul>
+                        </div>
+                        <div class="g-share">
+                            <span><i class="fa fa-heart" aria-hidden="true"></i><a href="">收藏</a></span>
+                            <span><i class="fa fa-share-square-o" aria-hidden="true"></i><a href="">分享</a></span>
+                        </div>
+                        <div class="g-code">
+                            <div>
+                                <img src="./images/details/app.jpg" alt="">
+                                <span>扫一扫加入购物袋</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-message">
+            <div class="title">
+                <h3>商品信息</h3>
+            </div>
+            <div class="message-content clearfix">
+                <table class="mes-table clearfix">
+                    <tbody>
+                        <tr>
+                            <td>鞋头款式：方头</td>
+                            <td>鞋底材质：橡胶底</td>
+                            <td>鞋面图案：纯色</td>
+                            <td>内增高：0.5CM</td>
+                            <td>鞋跟形状：方跟</td>
+                        </tr>
+                        <tr>
+                            <td>鞋面材质：牛皮革</td>
+                            <td>流行元素：马衔扣</td>
+                            <td>36码鞋长参考(女)：24CM</td>
+                            <td>36码鞋宽参考(女)：8CM</td>
+                            <td>闭合方式：套脚</td>
+                        </tr>
+                        <tr>
+                            <td>风格：简约</td>
+                            <td>色系：白色</td>
+                            <td>鞋跟：4CM</td>
+                            <td>配跟：无</td>
+                            <td>性别：女</td>
+                        </tr>
+                        <tr>
+                            <td>里料材质：猪皮革</td>
+                            <td>制鞋工艺：胶贴皮鞋</td>
+                            <td>款式季节：秋季</td>
+                            <td>鞋垫材质：头层猪皮革</td>
+                            <td>前掌高度：0.5CM</td>
+                        </tr>
+                        <tr>
+                            <td>皮质特征：头层皮</td>
+                            <td>防水台高度：无</td>
+                            <td>鞋类流行款式：乐福鞋</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="size-message">
+            <div class="title">
+                <h3>尺码信息</h3>
+            </div>
+            <div class="size-content">
+                <table class="size-table">
+                    <tbody>
+                        <tr>
+                            <td>法国码</td>
+                            <td>32</td>
+                            <td>33</td>
+                            <td>34</td>
+                            <td>35</td>
+                            <td>36</td>
+                            <td>37</td>
+                            <td>38</td>
+                            <td>39</td>
+                            <td>40</td>
+                            <td>41</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>国际码</td>
+                            <td>210</td>
+                            <td>215</td>
+                            <td>220</td>
+                            <td>225</td>
+                            <td>230</td>
+                            <td>235</td>
+                            <td>240</td>
+                            <td>245</td>
+                            <td>250</td>
+                            <td>255</td>
+                            <td>260</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="product-details">
+            <div class="title">
+                <h3>商品详情</h3>
+            </div>
+            <div class="detail-photo">
+                <div class="photo-center">
+                    <img src="./images/details/a1.jpg" alt="">
+                    <img src="./images/details/a2.jpg" alt="">
+                    <img src="./images/details/a3.jpg" alt="">
+                    <img src="./images/details/a4.jpg" alt="">
+                    <img src="./images/details/a5.jpg" alt="">
+                    <img src="./images/details/a6.jpg" alt="">
+                    <img src="./images/details/a7.jpg" alt="">
+                    <img src="./images/details/a8.jpg" alt="">
+                    <img src="./images/details/a9.jpg" alt="">
+                    <img src="./images/details/a10.jpg" alt="">
+                    <img src="./images/details/a11.jpg" alt="">
+                </div>
+            </div>
+            <div class="detail-down">
+                <div>
+                    <img src="./images/details/a13.jpg" alt="">
+                    <p>Teenmix（天美意），作为一个都市时尚休闲品牌，倡导“life for fun ,style for
+                        teens”即“人生追求情趣，年轻追求个性”的生活品位，迎合都市年轻人不拘一格，追求mix&match自由组合，创出自我风格的潮流理念。Teenmix向人们展示了流行的转变，强调创意与个性，“teen”代表一群张扬个性、散发活力、追求都市炫彩生活的新新人群；“mix”即mix&match，代表时尚混搭精神，品牌为年轻人提供恍如贴身订造的时尚潮品，并因应时尚的转变而响应。“随我意，天美意”传达了品牌的主张与个性。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="product-pingjia">
+            <div class="pingjia-tit">
+                <h3>商品评价</h3>
+            </div>
+            <div class="pingjia-left">
+                <div class="clearfix">
+                    <p>该商品暂无评价</p>
+                    <strong>快来发表第一个点评吧</strong>
+                    <a href="javascript:;">我要写点评</a>
+                </div>
+            </div>
+        </div>
+        <div class="guess-like">
+            <div class="like-tit">
+                <h3>猜你喜欢</h3>
+            </div>
+            <div class="like">
+                <div class="swiper-container one">
+                    <div class="swiper-wrapper two">
+                        <div class="swiper-slide clearfix" style="width:920px;margin:0 auto;">
+                            <div class="swiper-item1">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-one.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>399</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item2">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-two.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>789</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item3">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-three.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-two-two.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>529</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item4">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-four.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>959</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide clearfix" style="width:920px;margin:0 auto;">
+                            <div class="swiper-item1">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-five.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-three-three.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>859</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item2">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-six.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>529</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item3">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-seven.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-two-two.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>639</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item4">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-eight.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>789</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide clearfix" style="width:920px;margin:0 auto;">
+                            <div class="swiper-item1">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-one.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>399</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item2">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-two.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>789</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item3">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-three.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-two-two.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>529</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="swiper-item4">
+                                <div class="goods-img">
+                                    <a href=""><img src="./images/index/shoes-four.jpg" alt=""></a>
+                                </div>
+                                <img src="./images/index/shop-one-one.png" alt="">
+                                <p><a href="">休闲 手提/斜挎两用包</a></p>
+                                <div class="price">
+                                    <div>￥<span>959</span></div>
+                                </div>
+                                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-feature">
+            <div class="container">
+                <ul class="zp clearfix">
+                    <li class="clearfix"><img src="./images/index/footer2.png" alt=""><span><a href="">正品保证</a></span>
+                    </li>
+                    <li class="zpli  clearfix"><img src="./images/index/footer3.png" alt=""><span><a
+                                href="">10天退换货</a></span>
+                    </li>
+                    <li class="zpli clearfix"><img src="./images/index/footer4.png" alt=""><span><a
+                                href="">10天调补差价额</a></span>
+                    </li>
+                    <li class="zpli clearfix"><img src="./images/index/footer1.png" alt=""><span><a
+                                href="">09:00—21:00在线客服</a></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-help">
+            <div class="container">
+                <div class="guide">
+                    <ul class="clearfix">
+                        <li class="gitem1">
+                            <div class="dl">
+                                <span>新手帮助</span>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">交易条款协议</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">注册新用户</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">会员积分详情</a>
+                                <br />
+                            </div>
+                        </li>
+                        <li class="gitem2">
+                            <div class="dl">
+                                <span>购物指南</span>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">订购流程</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">验货与签收</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">订单配送</a>
+                                <br />
+                            </div>
+                        </li>
+                        <li class="gitem3">
+                            <div class="dl">
+                                <span>支付/配送</span>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">支付方式</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">配送方式</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">配送时间及运费</a>
+                                <br />
+                            </div>
+                        </li>
+                        <li class="gitem4">
+                            <div class="dl">
+                                <span>售后服务</span>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">退换货政策</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">退款说明</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">发货制度</a>
+                                <br />
+                            </div>
+                        </li>
+                        <li class="gitem5">
+                            <div class="dl">
+                                <span>会员服务</span>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">找回密码</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">联系我们</a>
+                                <br />
+
+                            </div>
+                        </li>
+                        <li class="gitem6">
+                            <div class="dl">
+                                <span>优购客服</span>
+                                <br />
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
+                                <a class="message" href="https://www.yougou.com/help/agreement.shtml">联系我们</a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">Email: ygservice@belle.com.cn
+                                </a>
+                                <br />
+                                <a href="https://www.yougou.com/help/agreement.shtml">微信客服：优购时尚商城</a>
+                                <br />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nation clearfix">
+                    <ul class=" nation-left clearfix">
+                        <li><a href=""><img src="./images/index/beian1.gif" alt=""></a></li>
+                        <li><a href=""><img src="./images/index/beian1.png" alt=""></a></li>
+                        <li><a href=""><img src="./images/index/beian2.png" alt=""></a></li>
+                    </ul>
+                    <ul class="nation-right clearfix">
+                        <li>
+                            <div class="appdiv">
+                                <img src="./images/index/app.jpg" alt="">
+                            </div>
+                            <span class="appp">扫码下载手机客户端</span>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/index/weChat.jpg" alt="">
+
+                            </div>
+                            <span class="wechat">关注公众号</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="friendly">
+                    <ul class="friendly-left clearfix">
+                        <li><a href="">关于优购&nbsp;&nbsp;|&nbsp;&nbsp;</a></li>
+                        <li><a href="">集团采购&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">招贤纳士&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">手机优购&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">联系我们&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">友情链接&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Copyright © 2011-2016 Yougou Technology Co., Ltd. <a href="">粤ICP备09070608号</a>
+                        深公网安备：4403101910665 <a href="">粤公网安备
+                            44030502000017号</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/jQuery-imgzoom.js"></script>
+    <script>
+        $(window).scroll(function () {
+            console.log($(this).scrollTop())
+            // 获取滚动条距离顶部的距离
+            var mile = $(this).scrollTop()
+            // console.log(mile)
+            if (mile > 200) {
+                $('.nav ').css('display', 'block')
+                $('.nav top').css('display', 'block')
+                console.log('大于200')
+            }
+            if (mile < 210) {
+                console.log('小于200')
+                $('.nav ').css('display', 'none')
+                $('.untop').css('display', 'block')
+                // $('.nav top').css('opacity', '0')
+            }
+        })
+        $('.woman').mouseover(function () {
+            $('.box').slideDown('300')
+        })
+        $('.woman').mouseout(function () {
+            $('.box').slideUp('300')
+        })
+
+        $(".img-list li").mouseover(function () {
+            var path = "./images/details/x" + ($(this).index() * 1 + 1) + 'd.jpg'
+            // $(".pic-box1").css('z-index', '10000');
+            $(".pic-box1 img").attr("src", path)
+            $(".pic-box1 img").attr("data-large", path)
+            console.log(path)
+        })
+        $(".pic-box1").imgzoom({ times: "1" })
+
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/top-up.css">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+
+        .sec-reg {
+            display: none;
+        }
+
+        .word {
+            font-size: 12px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="top-up">
+                <div class="top-up-inner clearfix">
+                    <div class="up-left clearfix" style="z-index: 10000;">
+                        <div class="follow " style="z-index: 10000;">
+                            <span>关注</span>
+                            <div class="followin">
+                                <img src="images/login/weChat.jpg" alt="">
+                                <span class="title11">关注公众号</span>
+                            </div>
+                        </div>
+                        <div class="download" style="z-index: 10000;">
+                            <span>下载APP</span>
+                            <div class="downloadin">
+                                <img src="images/login/app.jpg" alt="">
+                                <span class="title11">优购APP下载</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="up-right">
+                        <ul class="clearfix">
+                            <li class="up-right-one"><a href="">登录</a></li>
+                            <li class="up-right-two"><span>/</span></li>
+                            <li class="up-right-three"><a href="">注册</a></li>
+                            <li class="up-right-four"><a href=""><span class="fa fa-heart"
+                                        aria-hidden="true"></span>收藏</a></li>
+                            <li class="up-right-five"><a href=""><span class="fa fa-shopping-bag"
+                                        aria-hidden="true"></span>购物袋</a></li>
+                            <li class="up-right-six"><a href="">公告</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top">
+                <div class="top-inner clearfix">
+                    <div class="logo">
+                        <h3><a href=""><img src="images/login/logo.png" alt=""></a></h3>
+                    </div>
+                    <div class="user">
+                        <span>用户登录</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner" style="z-index: 0;">
+                <div class="register clearfix ">
+                    <ul class="clearfix">
+                        <li class="acc-num"><a href="javascript:;">账号密码登录</a></li>
+                        <li class="phone-num"><a href="javascript:;">手机号快捷登录</a></li>
+                    </ul>
+
+                    <div class="register-main">
+                        <form action="" class="fir-reg">
+                            <div class="list">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <input type="text" placeholder="手机号/会员名/邮箱">
+                                <div class="word" style="position:relative;padding-left: 28px;display: none;"><i
+                                        class="fa fa-minus-circle" style="color:#333;font-size: 12px;
+                                        position: absolute;top:-12px;left:5px;" aria-hidden="true">输入的账号或密码有误</i>
+                                </div>
+                            </div>
+                            <div class="list2">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                <input type="password" placeholder="请输入密码">
+                                <div class="word" style="position:relative;padding-left: 28px;display: none;"><i
+                                        class="fa fa-minus-circle" style="color:#333;font-size: 12px;
+                                    position: absolute;top:-12px;left:5px;" aria-hidden="true">输入的账号或密码有误</i>
+                                </div>
+                            </div>
+                            <!-- <div class="list3">
+                                <label class="lab1 ver_code" for="code2_">验证码</label>
+                            </div> -->
+                        </form>
+                        <form action="" class="sec-reg">
+                            <div class="list3">
+                                <span>手机号</span>
+                                <input type="text">
+                                <div class="word" style="position:relative;padding-left: 28px;display: none;"><i
+                                        class="fa fa-minus-circle" style="color:#333;font-size: 12px;
+                                    position: absolute;top:5px;left:5px;" aria-hidden="true">输入的账号或密码有误</i>
+                                </div>
+                            </div>
+                            <div class="list4 clearfix">
+                                <span>短信验证码</span>
+                                <input type="password">
+                                <div class="word" style="position:relative;padding-left: 28px;display: none;"><i
+                                        class="fa fa-minus-circle" style="color:#333;font-size: 12px;
+                                position: absolute;top:45px;left:5px;" aria-hidden="true">输入的账号或密码有误</i>
+                                </div>
+                                <div class="fr">
+                                    <a href=""><span>获取验证码</span></a>
+                                </div>
+                            </div>
+                            <!-- <div class="list3">
+                                <label class="lab1 ver_code" for="code2_">验证码</label>
+                            </div> -->
+                        </form>
+                        <p><a href="https://www.yougou.com/forgotpassword.jhtml" target="_blank">忘记密码?</a></p>
+                        <p style="text-align: center;">
+                            <input type="submit" value="点击登录" class="sub">
+                        </p>
+                        <p class="black" style="color:#999;margin-top:10px;text-align: center;font-size: 12px;">
+                            使用合作网站账号登录优购</p>
+                        <p class="cop_link clearfix">
+                            <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd4a55baba94aa963&response_type=code&scope=snsapi_login&redirect_uri=http%3A%2F%2Fwww.yougou.com%2Fmember%2FweixinCallback.jhtml%3F%26bizKey%3De343bb1398c74ee080287dc7dd98f6d9"
+                                class="cop_link_one"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                            <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D67042f88f6967d4779811b7a2dd51444"
+                                class="cop_link_two"><i class="fa fa-money" aria-hidden="true"></i></a>
+                            <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&display=page&client_id=222268&redirect_uri=http://www.yougou.com/api/qq/callBack.sc"
+                                class="cop_link_three"><i class="fa fa-qq" aria-hidden="true"></i></a>
+                            <a href="https://api.weibo.com/oauth2/authorize?client_id=2051478043&redirect_uri=https://www.yougou.com/api/sina/callBack.sc&response_type=code"
+                                class="cop_link_four"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                            <a href="http://graph.renren.com/oauth/grant?client_id=fe8451e48e4644eaa215e9ade7f88f60&redirect_uri=https%3A%2F%2Fwww.yougou.com%2Fapi%2Frenren%2FrenrenLogin.sc&response_type=code&display=page&secure=true&origin=00000"
+                                class="cop_link_five"><i class="fa fa-renren" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <footer>
+            <div>
+                <p>Copyright © 2011-2014 Yougou Technology Co., Ltd. &nbsp;&nbsp;&nbsp;<a href=""> 粤ICP备09070608号-4
+                        &nbsp;&nbsp;&nbsp;
+                    </a>增值电信业务经营许可证：<a href="">粤 B2-20090203</a></p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $('.acc-num').click(function () {
+
+            $('.acc-num a').css("background", "#333")
+            $('.acc-num a').css("color", "white")
+            $('.phone-num a').css("background", "#f3f3f3")
+            $('.phone-num a').css("color", "black")
+            $('.fir-reg').css("display", "block")
+            $('.sec-reg').css("display", "none")
+        })
+        $('.phone-num').click(function () {
+            $('.phone-num a').css("background", "#333")
+            $('.phone-num a').css("color", "white")
+            $('.acc-num a').css("background", "#f3f3f3")
+            $('.acc-num a').css("color", "black")
+            $('.fir-reg').css("display", "none")
+            $('.sec-reg').css("display", "block")
+        })
+        $('.list>input').blur(function () {
+            var phone = $(this).val()
+            var reg = /^[1][3456789][0-9]{9}$/
+            // reg.test(phone === false)
+            if (phone == '') {
+                $('.list .word').css("display", "block")
+                $('.list .word>i').text("请输入账号")
+            } else {
+                if (reg.test(phone) === false) {
+                    $('.list .word').css('display', "block")
+                    $('.list .word>i').text("输入的账号或密码有误")
+                }
+            }
+        })
+        $('.list2>input').blur(function () {
+            var phone = $(this).val()
+            if (phone == '') {
+                $('.list2 .word').css("display", "block")
+                $('.list2 .word>i').text("请输入密码")
+            }
+        })
+        $('.list3>input').blur(function () {
+            var phone = $(this).val()
+            var reg = /^[1][3456789][0-9]{9}$/
+            if (phone == '') {
+                $('.list3 .word').css("display", "block")
+                $('.list3 .word>i').text("请输入手机号码")
+            } else {
+                if (reg.test(phone) === false) {
+                    $('.list3 .word').css('display', "block")
+                    $('.list3 .word>i').text("格式错误")
+                }
+            }
+        })
+        $('.list4>input').blur(function () {
+            var phone = $(this).val()
+            var reg = /[3456789][0-9]{4}$/
+            if (phone == '') {
+                $('.list4 .word').css("display", "block")
+                $('.list4 .word>i').text("请输入验证码")
+            } else {
+                if (reg.test(phone) === false) {
+                    $('.list4 .word').css('display', "block")
+                    $('.list4 .word>i').text("短信验证码格式不正确")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
